@@ -9,14 +9,18 @@
 </head>
 <body>
   <header>
-    <h1 class = "headline">
-      <a>FEELA</a>
+    <h1>
+      <%= link_to "FEELA","/", class:"headline" %>
     </h1>
     <ul class = "nav-list"></ul>
-      <li class="nav-list-item">posts</li>
-      <li class="nav-list-item">lists</li>
+      <li class="nav-list-item"><%= link_to "posts",posts_path, class:"list-item" %></li>
+      <li class="nav-list-item"><%= link_to "creat new post",new_post_path, class:"list-item" %></li>
   </header>
+  <div>
+    <%= image_tag 'top.jpeg', class:"image_area"%>
+  </div>
   <footer>
+    <p>© All rights reserved by feela.</p>
   </footer>
 </body>
 </html>

@@ -1,11 +1,14 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+
   def index
     @post = Post.all
   end
+
   def new
     @post = Post.new
   end
+
   def create
     @post = Post.new(post_params)
     if params[:back]
@@ -18,8 +21,10 @@ class PostsController < ApplicationController
       end
     end
   end
+
   def edit
   end
+
   def update
     if @post.update(post_params)
       redirect_to posts_path, notice: "successfuly edited!"
@@ -27,12 +32,15 @@ class PostsController < ApplicationController
       render :edit
     end
   end
+
   def destroy
     @post.destroy
     redirect_to posts_path, notice: "deleted!"
   end
+
   def show
   end
+  
   def confirm
     @post = Post.new(post_params)
   end
@@ -45,6 +53,3 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 end
-
-  
-

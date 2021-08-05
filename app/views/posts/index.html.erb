@@ -1,3 +1,12 @@
+<header>
+    <h1>
+      <%= link_to "FEELA","/", class:"headline" %>
+    </h1>
+    <ul class = "nav-list"></ul>
+      <li class="nav-list-item"><%= link_to "posts",posts_path, class:"list-item" %></li>
+      <li class="nav-list-item"><%= link_to "create new post",new_post_path, class:"list-item" %></li>
+</header>
+
 <h1>Your Posts</h1>
 <p><%= notice %></p>
 <table class = user_post>
@@ -5,9 +14,11 @@
   <tr>
     <td><%= post.content %></td>
     <td> <%= link_to "edit", edit_post_path(post.id)%> </td>
-    <td> <%= link_to "delete", post_path(post.id), method: :delete ,data: {confirm: 'We will delete your post. Are you sure?'} %> </td>
+    <td> <%= link_to "delete", post_path(post.id), method: :DELETE ,data: {confirm: 'We will delete your post.Are you sure?'} %> </td>
   </tr>
 <% end %>
 </table>
 
-<%= link_to 'New Post', new_post_path %>
+<footer>
+    <p>© All rights reserved by feela.</p>
+  </footer>

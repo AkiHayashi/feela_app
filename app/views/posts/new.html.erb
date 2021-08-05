@@ -1,3 +1,13 @@
+<header>
+  <h1>
+    <%= link_to "FEELA","/", class:"headline" %>
+  </h1>
+  <ul class = "nav-list"></ul>
+    <li class="nav-list-item"><%= link_to "posts",posts_path, class:"list-item" %></li>
+    <li class="nav-list-item"><%= link_to "create posts",new_post_path, class:"list-item" %></li>
+</header>
 <h2>Tell me your feeling</h2>
 <%= render 'form' %>
-<%= link_to "your posts", posts_path%>
+<footer>
+  <p>© All rights reserved by feela.</p>
+</footer>
